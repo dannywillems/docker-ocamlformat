@@ -1,0 +1,38 @@
+stages:
+  - publish
+
+.publish-docker: &publish-docker
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: publish
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build . -t $CI_REGISTRY_IMAGE:${OCAMLFORMAT_VERSION} --build-arg OCAMLFORMAT_VERSION=${OCAMLFORMAT_VERSION}
+    - docker push $CI_REGISTRY_IMAGE:${OCAMLFORMAT_VERSION}
+
+publish-ocamlformat-0.14.0:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.0"
+
+publish-ocamlformat-0.14.1:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.1"
+
+publish-ocamlformat-0.14.2:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.2"
+
+publish-ocamlformat-0.14.3:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.3"
+
+publish-ocamlformat-0.15.0:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.15.0"
