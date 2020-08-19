@@ -34,27 +34,27 @@ publish-ocamlformat-0.13.0:
   variables:
     OCAMLFORMAT_VERSION: "0.13.0"
 
-# publish-ocamlformat-0.14.0:
-#   <<: *publish-docker
-#   variables:
-#     OCAMLFORMAT_VERSION: "0.14.0"
+publish-ocamlformat-0.14.0:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.0"
 
-# publish-ocamlformat-0.14.1:
-#   <<: *publish-docker
-#   variables:
-#     OCAMLFORMAT_VERSION: "0.14.1"
+publish-ocamlformat-0.14.1:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.1"
 
-# publish-ocamlformat-0.14.2:
-#   <<: *publish-docker
-#   variables:
-#     OCAMLFORMAT_VERSION: "0.14.2"
+publish-ocamlformat-0.14.2:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.2"
 
-# publish-ocamlformat-0.14.3:
-#   <<: *publish-docker
-#   variables:
-#     OCAMLFORMAT_VERSION: "0.14.3"
+publish-ocamlformat-0.14.3:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.14.3"
 
-# publish-ocamlformat-0.15.0:
-#   <<: *publish-docker
-#   variables:
-#     OCAMLFORMAT_VERSION: "0.15.0"
+publish-ocamlformat-0.15.0:
+  <<: *publish-docker
+  variables:
+    OCAMLFORMAT_VERSION: "0.15.0"
